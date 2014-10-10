@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="zh-cn" ng-app="TBPlugin" ng-csp>
+<head>
+    <meta charset="UTF-8">
+    <title>TBPlugin</title>
+    <script type="text/javascript" src="js/angular.min.js"></script>
+    <script type="text/javascript" src="js/popup.js"></script>
+    </head>
+<body ng-controller="mainController">
+    <input type="checkbox" id="removeAd" ng-model="settings.removeAd"/>去除广告
+    <p>关键字</p>
+    <input type="text" id="spam" />
+    <button ng-click="add()">添加</button>
+    <ul ng-repeat="spam in settings.spamList">
+        <li><span>{{ spam }}</span><button ng-click="remove(spam)">删除</button></li>
+    </ul>
+    <button ng-click="save()">保存</button>
+</body>
+</html>

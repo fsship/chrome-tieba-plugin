@@ -10,7 +10,7 @@
     "content_scripts":[
 		{
 			"matches":["http://tieba.baidu.com/*"],
-			"js":["js/remover.js"],
+			"js":["js/remover.js", "js/jquery.js"],
 			"run_at":"document_end"
 		}
 	],

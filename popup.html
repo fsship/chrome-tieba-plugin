@@ -7,8 +7,9 @@
     <script type="text/javascript" src="js/popup.js"></script>
     </head>
 <body ng-controller="mainController" style="width:300px">
-    <input type="checkbox" id="removeAd" ng-model="settings.removeAd"/>去除广告
-    <p>关键字</p>
+    <h3>贴吧环境净化器</h3>
+    <input type="checkbox" id="removeAd" ng-model="settings.removeAd" ng-click="save()"/>去除广告
+    <p>水贴关键字</p>
     <input type="text" id="spam" />
     <button ng-click="add()">添加</button>
     <ul style="list-style:none">

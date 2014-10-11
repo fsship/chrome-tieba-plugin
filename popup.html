@@ -6,14 +6,13 @@
     <script type="text/javascript" src="js/angular.min.js"></script>
     <script type="text/javascript" src="js/popup.js"></script>
     </head>
-<body ng-controller="mainController">
+<body ng-controller="mainController" style="width:300px">
     <input type="checkbox" id="removeAd" ng-model="settings.removeAd"/>去除广告
     <p>关键字</p>
     <input type="text" id="spam" />
     <button ng-click="add()">添加</button>
-    <ul ng-repeat="spam in settings.spamList">
-        <li><span>{{ spam }}</span><button ng-click="remove(spam)">删除</button></li>
+    <ul style="list-style:none">
+        <li ng-repeat="spam in settings.spamList" style="width:100%;margin-top:5px"><span style="text-overflow:ellipsis;overflow: hidden;width:214px;display:inline-block">{{ spam }}</span><button ng-click="remove(spam)" style="float:right;display:inline-block">删除</button></li>
     </ul>
-    <button ng-click="save()">保存</button>
 </body>
 </html>

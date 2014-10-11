@@ -27,6 +27,7 @@
                 }
             }
             $scope.settings.spamList.push(theSpam);
+            $scope.save();
         }
 
         $scope.remove = function(theSpam) {
@@ -36,13 +37,13 @@
                     $scope.settings.spamList.splice(i, 1);
                 }
             }
+            $scope.save();
         }
 
-        $scope.save = function() {
+        $scope.save = function(todo) {
             chrome.storage.sync.set({
                 settings : $scope.settings
             }, function() {
-                window.close();
             });
         }
     });
